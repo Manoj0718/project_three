@@ -1,0 +1,126 @@
+@mixin h1text_mobile {
+    font-family: 'Prata', serif;
+    font-size: 2em;
+    line-height: 1.25em;
+    margin-bottom: 10px;
+}
+
+@mixin h2text_mobile {
+    font-family: 'Prata', serif;
+    font-size: 1.625em;
+    line-height: 1.153em;
+    margin-bottom: 10px;
+
+}
+
+@mixin h3text_mobile {
+    font-family: 'Muli', 'Open Sans', sans-serif;
+    font-size: 1.375em;
+    line-height: 1.136em;
+    margin-bottom: 10px;
+
+}
+
+@mixin h4text_mobile {
+    font-family: 'Muli', 'Open Sans', sans-serif;
+    font-size: 1.125em;
+    line-height: 1.111em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+@mixin ptext_mobile {
+    font-family: 'Muli', 'Open Sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.25em;
+    margin-bottom: 10px;
+
+}
+
+@mixin quote_mobiletext {
+    font-family: 'Muli', serif;
+    font-size: 1.25em;
+    line-height: 1.25em;
+    margin-bottom: 10px;
+
+}
+
+@mixin mobile-div-padding {
+    display: block;
+    margin: 4px auto;
+
+}
+
+@mixin flex-colum {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@mixin border {
+    border: 2px solid $border-color;
+
+}
+
+@mixin h1text_pc {
+    font-family: 'Prata', serif;
+    font-size: 48px;
+    line-height: 1.05em;
+    margin-bottom: 20px;
+}
+
+@mixin h2text_pc {
+    font-family: 'Prata', serif;
+    font-size: 36px;
+    line-height: 1.25em;
+    margin-bottom: 20px;
+
+}
+
+@mixin h3text_pc {
+    font-family: 'Muli', 'Open Sans', sans-serif;
+    font-size: 28px;
+    line-height: 1.25em;
+    margin-bottom: 15px;
+
+}
+
+@mixin h4text_pc {
+    font-family: 'Muli', 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.375em;
+    margin-bottom: 15px;
+
+}
+
+@mixin ptext_pc {
+    font-family: 'Muli', 'Open sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.375em;
+    margin-bottom: 15px;
+}
+
+@mixin quotetext_pc {
+    font-size: 24px;
+    line-height: 1.458em;
+    font-family: 'Muli', 'Open sans', sans-serif;
+    margin-bottom: 15px;
+
+}
+
+@mixin wide-screen {
+    @media screen and (min-width: map-get($breakpoint, pc-screen)) {
+        display: flex;
+        flex-direction: row;
+    }
+
+}
+
+// @mixin mobile_padding {
+// // padding: 10px;
+// // margin: 10px;
+
+// }

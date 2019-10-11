@@ -1,0 +1,131 @@
+// --Experience section--
+#experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        @include h2text_mobile;
+
+        @media screen and (min-width :map-get($breakpoint, pc-screen)) {
+            @include h2text_pc;
+
+        }
+
+        ;
+    }
+
+    p.quote {
+        @include quote_mobiletext;
+        text-align: center;
+
+        @media screen and (min-width :map-get($breakpoint, pc-screen)) {
+            @include quotetext_pc;
+
+        }
+
+        ;
+    }
+
+    .experience-topic h3 {
+        @include h3text_mobile;
+        text-align: center;
+        font-weight: 900;
+        padding: 20px 0px;
+
+        @media screen and (min-width :map-get($breakpoint, pc-screen)) {
+            @include h3text_pc;
+
+        }
+
+        ;
+    }
+
+    .experience-container {
+        width: 100%;
+        @include wide-screen;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: flex-start;
+        width: 100%;
+        text-align: left;
+
+        &_edu {
+            text-align: left;
+
+            @media screen and (min-width :map-get($breakpoint, pc-screen)) {
+                width: 30%;
+                text-align: center;
+                border-bottom: 1px solid $border-color;
+                margin-bottom: 10px;
+
+            }
+
+            ;
+
+            h4 {
+                @include h4text_mobile;
+
+                @media screen and (min-width :map-get($breakpoint, pc-screen)) {
+                    @include h4text_pc;
+                    text-align: left;
+
+                }
+
+                ;
+            }
+
+            p {
+                @include ptext_mobile;
+
+                @media screen and (min-width :map-get($breakpoint, pc-screen)) {
+                    @include ptext_pc;
+                    text-align: left;
+
+                }
+
+                ;
+            }
+        }
+
+        .experience-container_details {
+            @media screen and (min-width :map-get($breakpoint, pc-screen)) {
+                width: 60%;
+                text-align: left;
+                border-bottom: 1px solid $border-color;
+                margin-bottom: 10px;
+
+            }
+
+            ;
+
+            h4 {
+                @include h4text_mobile;
+                margin-bottom: 15px;
+                border-bottom: 2px solid $border-color;
+
+                @media screen and (min-width :map-get($breakpoint, pc-screen)) {
+                    @include h4text_pc;
+                    border-bottom: none;
+
+                }
+
+                ;
+            }
+
+            p {
+                display: none;
+
+                @media screen and (min-width :map-get($breakpoint, pc-screen)) {
+                    @include ptext_pc;
+                    display: inline;
+
+                }
+
+                ;
+            }
+        }
+
+    }
+}

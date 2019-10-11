@@ -1,0 +1,129 @@
+#mainsection {
+    background-image: linear-gradient(rgba(2, 0, 0108, .45), rgba(2, 0, 108, .45)), url("https://cdn.pixabay.com/photo/2016/06/07/21/16/magic-1442661_1280.jpg");
+    padding: 0px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+
+    .maintext {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+
+
+        h1 {
+            @include h1text_mobile;
+            color: $font-color-white;
+
+            @media screen and (min-width: map-get($breakpoint, pc-screen)) {
+                @include h1text_pc;
+                animation: h1_progress 600ms;
+
+                @keyframes h1_progress {
+                    0% {
+                        transform: scale(0);
+                        opacity: 0;
+                    }
+
+                    50% {
+                        transform: scale(1.2);
+                        opacity: .50;
+
+                    }
+
+                    100% {
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+
+
+                }
+            }
+
+            ;
+
+
+        }
+
+        h3 {
+            @include h3text_mobile;
+            color: $font-color-white;
+
+            @media screen and (min-width: map-get($breakpoint, pc-screen)) {
+                @include h3text_pc;
+                animation: h3_progress 800ms;
+
+
+            }
+
+            @keyframes h3_progress {
+                0% {
+                    transform: scale(0);
+                    opacity: 0;
+                }
+
+                50% {
+                    transform: scale(1.2);
+                    opacity: 2;
+
+                }
+
+                100% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+
+
+            }
+
+            ;
+
+
+        }
+
+        .btn {
+            text-decoration: none;
+            color: $font-color-white;
+            border: 2px solid $font-color-white;
+            border-radius: 30px;
+            width: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            @include h4text_mobile;
+            margin-top: 50px;
+            padding: 10px;
+            background: linear-gradient(-45deg, #020234, #07ECFE, #4BAEFE, #020234);
+            background-size: 400% 400%;
+            animation: gradientBG 1000ms infinite;
+
+            @media screen and (min-width: map-get($breakpoint, pc-screen)) {
+                @include h4text_pc;
+                width: 200px;
+
+            }
+
+            ;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 100% 100%;
+            }
+
+            50% {
+                background-position: 50% 50%;
+            }
+
+            100% {
+                background-position: 100% 100%;
+            }
+
+        }
+
+
+    }
+}

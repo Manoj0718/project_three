@@ -1,0 +1,55 @@
+#footer {
+    @include flex-colum;
+    background-color: #020234;
+    color: $font-color-white;
+
+    @media screen and (min-width:map-get($breakpoint, pc-screen)) {
+        height: 300px;
+
+    }
+
+    h2 {
+        @include h2text_mobile;
+
+        @media screen and (min-width :map-get($breakpoint, pc-screen)) {
+
+            @include h2text_pc;
+            text-align: center;
+        }
+
+        ;
+
+    }
+
+    &_line {
+        border-top: 1px solid #FFCC33;
+        border-bottom: 1px solid #fff;
+    }
+
+    .footertext {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & a {
+            @include ptext_mobile;
+            text-decoration: none;
+            color: $font-color-white;
+
+            & img {
+                color: #FFFF;
+            }
+
+            @media screen and (min-width :map-get($breakpoint, pc-screen)) {
+
+                @include ptext_pc;
+                text-align: center;
+            }
+
+            ;
+
+
+        }
+    }
+}

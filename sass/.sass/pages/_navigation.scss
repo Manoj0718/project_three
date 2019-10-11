@@ -1,0 +1,31 @@
+.menu {
+    display: none;
+
+    @media screen and (min-width :map-get($breakpoint, pc-screen)) {
+        display: block;
+        position: fixed;
+        @include ptext_pc;
+        padding: 5px;
+        width: 130px;
+        z-index: 100;
+        margin-bottom: 100%;
+        right: 25px;
+        top: 50px;
+
+
+
+        & ul {
+            list-style: none;
+            background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+
+            & li a {
+                display: block;
+                color: font-color-white;
+                padding: 8px 16px;
+                text-decoration: none;
+            }
+        }
+    }
+
+    ;
+}
